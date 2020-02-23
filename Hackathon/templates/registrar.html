@@ -3,33 +3,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Faculty View {% endblock title%}</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
+     <title>{% block title %}Registrar View {% endblock title%}</title>
 </head>
 <body>
-
-<script>
-    $(document).ready(function(){
-$("#mytable #checkall").click(function () {
-        if ($("#mytable #checkall").is(':checked')) {
-            $("#mytable input[type=checkbox]").each(function () {
-                $(this).prop("checked", true);
-            });
-
-        } else {
-            $("#mytable input[type=checkbox]").each(function () {
-                $(this).prop("checked", false);
-            });
-        }
-    });
-
-    $("[data-toggle=tooltip]").tooltip();
-});
-
-</script>
 {% block table %}
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
@@ -39,7 +15,7 @@ $("#mytable #checkall").click(function () {
 
 
         <div class="col-md-12">
-        <h4>Blockchain Student Request Ledger </h4>
+        <h4>Pending Overrides </h4>
         <div class="table-responsive">
 
 
@@ -149,24 +125,24 @@ $("#mytable #checkall").click(function () {
     <div class="modal-content">
           <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-        <h4 class="modal-title custom_align" id="Heading">View Entry</h4>
+        <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
       </div>
           <div class="modal-body">
           <div class="form-group">
-        <input class="form-control " type="text" placeholder="Verified Record">
+        <input class="form-control " type="text" placeholder="Mohsin">
         </div>
         <div class="form-group">
 
-        <input class="form-control " type="text" placeholder="2020-02-24T05:51:13+00:00">
+        <input class="form-control " type="text" placeholder="Irshad">
         </div>
         <div class="form-group">
-        <textarea rows="2" class="form-control" placeholder="Ledger Hash: 751fb080b9ecc0e7f9bda63593cf383d"></textarea>
+        <textarea rows="2" class="form-control" placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"></textarea>
 
 
         </div>
       </div>
           <div class="modal-footer ">
-        <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Confirm</button>
+        <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
       </div>
         </div>
     <!-- /.modal-content -->
@@ -199,6 +175,5 @@ $("#mytable #checkall").click(function () {
     </div>
 
 {% endblock table %}
-{% block footer %}{% endblock footer %}
 </body>
 </html>
