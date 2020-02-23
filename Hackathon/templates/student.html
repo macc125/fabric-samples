@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
-{% block title %} {% endblock title %}
+
 <html lang="en">
 
 <head>
@@ -18,7 +18,7 @@
 
   <!-- Custom styles for this template -->
   <link href="{{ url_for('static', filename='vendor/bootstrap/css/business-frontpage.css') }}" rel="stylesheet">
-
+<title>Student View{% block title %}{% endblock title %}</title>
 </head>
 
 <style>
@@ -75,17 +75,18 @@
         {% block infopane %}
         <h2>Student Form Management</h2>
         <hr>
+        <p>Electronic forms are available 24/7 and greatly enhance the student experience at Marist. By reducing paper waste and the need for physical travel, Effortlessly Paper makes it easy to manage </p>
         <p>All relevant student forms can be accessed here. Select a form below and fill out the required information to submit it for processing.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
-        <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a>
+
+
       </div>
       <div class="col-md-4 mb-5">
         <h2>Need Help?</h2>
         <hr>
         <address>
-          <strong>Start Bootstrap</strong>
-          <br>3481 Melrose Place
-          <br>Beverly Hills, CA 90210
+          <strong>Student Processing</strong>
+          <br>3399 North Road
+          <br>Poughkeepsie, NY 12601
           <br>
         </address>
         <address>
@@ -93,7 +94,7 @@
           (123) 456-7890
           <br>
           <abbr title="Email">E:</abbr>
-          <a href="mailto:#">name@example.com</a>
+          <a href="mailto:#">StudentProcessing@marist.edu</a>
         </address>
       </div>
       {% endblock infopane %}
@@ -106,6 +107,7 @@
         <div class="card h-100">
           <img class="card-img-top" src="http://placehold.it/300x200" alt="">
           <div class="card-body">
+            {% block formname3 %}Student Forms{% endblock formname3 %}
             <h4 class="card-title">Student Information</h4>
 
 
