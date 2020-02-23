@@ -72,14 +72,15 @@
 
     <div class="row">
       <div class="col-md-8 mb-5">
-        <h2>What We Do</h2>
+        {% block infopane %}
+        <h2>Student Form Management</h2>
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
+        <p>All relevant student forms can be accessed here. Select a form below and fill out the required information to submit it for processing.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
         <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a>
       </div>
       <div class="col-md-4 mb-5">
-        <h2>Contact Us</h2>
+        <h2>Need Help?</h2>
         <hr>
         <address>
           <strong>Start Bootstrap</strong>
@@ -95,7 +96,9 @@
           <a href="mailto:#">name@example.com</a>
         </address>
       </div>
+      {% endblock infopane %}
     </div>
+
     <!-- /.row -->
 
     <div class="row">
@@ -111,9 +114,9 @@
 <div class="row">
   <div class="col-10">
     <div class="list-group" id="list-tab-left" role="tablist">
-      <a class="list-group-item list-group-item-action active" id="list-home-list-left" data-toggle="list" href="#" role="tab" aria-controls="home">Override Form</a>
-      <a class="list-group-item list-group-item-action" id="list-profile-list-left" data-toggle="list" href="#" role="tab" aria-controls="profile">Course Drop Form</a>
-      <a class="list-group-item list-group-item-action" id="list-messages-list-left" data-toggle="list" href="#" role="tab" aria-controls="messages">Restriction Form</a>
+      <a class="list-group-item list-group-item-action active" id="list-home-list-left" data-toggle="list" href="#" role="tab" aria-controls="home">Minor/Major Drop Form</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list-left" data-toggle="list" href="#" role="tab" aria-controls="profile">Pathway Form</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list-left" data-toggle="list" href="#" role="tab" aria-controls="messages">Change in Name/Directory Form</a>
       <a class="list-group-item list-group-item-action" id="list-settings-list-left" data-toggle="list" href="#" role="tab" aria-controls="settings">Declare Major/Minor Form</a>
     </div>
   </div>
@@ -142,8 +145,15 @@
         <input type="email" class="form-control" id="FormControlInput1" placeholder="CWID">
             <br>
             <div class="border"></div>
+
+           <label for="FormControlInput2">Course Override</label>
+        <input type="email" class="form-control" id="FormControlInput2" placeholder="CRN">
             <br>
-        <div class="dropdown">
+            <div class="border"></div>
+
+          <a class="btn btn-primary" href="#" role="button">Submit Override</a>
+
+        <!--<div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Course Selection
         </button>
@@ -151,9 +161,12 @@
         <a class="dropdown-item" href="#">Class1</a>
         <a class="dropdown-item" href="#">Class2</a>
         <a class="dropdown-item" href="#">Class3</a>
+
   </div>
-</div>
+
+</div>-->
         </div>
+        </form>
         {% endblock card2content %}
       <div class="col-md-4 mb-5">
         <div class="card h-100">
@@ -192,7 +205,7 @@
         <div class="card h-100">
           <img class="card-img-top" src="http://placehold.it/300x200" alt="">
           <div class="card-body">
-            <h4 class="card-title">Student Forms</h4>
+            <h4 class="card-title">{% block formname2 %}Student Forms{% endblock formname2 %}</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
           </div>
           <div class="card-footer">
